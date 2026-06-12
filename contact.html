@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Football Principle Lab</title>
+  <meta name="description" content="Football Principle Labへのお問い合わせ。執筆依頼、メディア掲載、コラボレーションなどお気軽にご連絡ください。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-abbr">FPL</span>
+      <span class="nav-logo-name">Football Principle Lab</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="articles.html">Articles</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-nav" id="mobileNav" style="display:none;">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="articles.html">Articles</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<div class="contact-layout">
+  <p style="font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.15em;color:var(--green);text-transform:uppercase;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.75rem;">
+    <span style="display:block;width:2rem;height:1px;background:var(--green);"></span>
+    Contact
+  </p>
+  <h1 style="margin-bottom:0.75rem;">お問い合わせ</h1>
+  <p>執筆依頼・メディア掲載・コラボレーション・その他についてお気軽にご連絡ください。通常 3〜5 営業日以内にご返信します。</p>
+
+  <form id="contactForm" action="#" method="post" novalidate>
+
+    <div class="form-group">
+      <label for="name">お名前 <span style="color:var(--green);">*</span></label>
+      <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">メールアドレス <span style="color:var(--green);">*</span></label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="subject">お問い合わせの種類</label>
+      <select id="subject" name="subject">
+        <option value="">選択してください</option>
+        <option value="writing">執筆依頼</option>
+        <option value="media">メディア掲載</option>
+        <option value="collab">コラボレーション</option>
+        <option value="feedback">フィードバック</option>
+        <option value="other">その他</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">メッセージ <span style="color:var(--green);">*</span></label>
+      <textarea id="message" name="message" placeholder="お問い合わせ内容をご記入ください..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:0.9rem;padding:1rem;">
+      送信する
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+
+    <p id="formMsg" style="display:none;margin-top:1.25rem;padding:1rem;border:1px solid var(--green);font-size:0.9rem;color:var(--green);font-family:var(--font-mono);">
+      ✓ 送信が完了しました。ありがとうございます。
+    </p>
+
+  </form>
+
+  <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--gray-200);">
+    <p style="font-family:var(--font-mono);font-size:0.7rem;color:var(--gray-400);letter-spacing:0.05em;">
+      Football Principle Lab &nbsp;·&nbsp; 現象ではなく原則を語る
+    </p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <span class="nav-logo-abbr">FPL</span>
+          <span class="nav-logo-name">Football Principle Lab</span>
+        </div>
+        <p class="footer-tagline">Discover the Principles Behind the Game.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="articles.html?cat=principles">Principles</a></li>
+          <li><a href="articles.html?cat=individual">Individual Tactics</a></li>
+          <li><a href="articles.html?cat=analysis">Analysis</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Football Principle Lab. All rights reserved.</span>
+      <span class="mono">現象ではなく原則を語る</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    var nav = document.getElementById('mobileNav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('formMsg').style.display = 'block';
+    this.reset();
+    window.scrollTo({ top: document.getElementById('formMsg').offsetTop - 100, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
