@@ -175,21 +175,31 @@ h4 { font-size: 1rem; font-weight: 600; }
    HERO
    ============================================ */
 .hero {
-  padding: 6rem 1.5rem 5rem;
+  padding: 7rem 1.5rem 6rem;
   border-bottom: 1px solid var(--gray-200);
   position: relative;
   overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=1600&auto=format&fit=crop&q=60');
+  background-size: cover;
+  background-position: center 40%;
+}
+
+/* Dark overlay for readability */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.97) 0%,
+    rgba(255,255,255,0.92) 45%,
+    rgba(255,255,255,0.3) 100%
+  );
+  z-index: 0;
 }
 
 .hero::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 40%;
-  height: 100%;
-  background: var(--gray-100);
-  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
-  z-index: 0;
+  display: none;
 }
 
 .hero-inner {
@@ -327,16 +337,33 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .article-card {
-  padding: 1.75rem;
+  padding: 0;
   border-right: 1px solid var(--gray-200);
   border-bottom: 1px solid var(--gray-200);
   position: relative;
   transition: background 0.2s;
+  overflow: hidden;
 }
 
 .article-card:last-child, .article-card:nth-child(3n) { border-right: none; }
 
 .article-card:hover { background: var(--gray-100); }
+
+/* Card thumbnail */
+.card-thumbnail {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: filter 0.3s, transform 0.4s;
+}
+.article-card:hover .card-thumbnail {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+.card-body { padding: 1.5rem; }
+.article-card--featured .card-thumbnail { height: 260px; }
 
 .card-number {
   font-family: var(--font-mono);
