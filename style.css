@@ -1,5 +1,5 @@
 /* ============================================
-   Football Principle Lab 窶� Global Styles v2
+   Football Principle Lab — Global Styles v2
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
@@ -129,7 +129,7 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 .mobile-nav a:last-child { border-bottom: none; }
 
 /* ============================================
-   HERO 窶� Dark full-bleed with pitch photo
+   HERO — Dark full-bleed with pitch photo
    ============================================ */
 .hero {
   position: relative;
@@ -246,7 +246,7 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 }
 
 /* ============================================
-   QUICK ACCESS 窶� Article categories strip
+   QUICK ACCESS — Article categories strip
    ============================================ */
 .quick-access {
   background: var(--dark-2);
@@ -379,7 +379,7 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 }
 
 /* ============================================
-   ABOUT STRIP 窶� Dark
+   ABOUT STRIP — Dark
    ============================================ */
 .about-strip {
   background: var(--dark);
