@@ -672,9 +672,12 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 
 <header class="site-header">
   <nav class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <span class="nav-logo-abbr">FPL</span>
-      <span class="nav-logo-name">Football Principle Lab</span>
+    <a href="index.html" class="nav-logo" style="flex-direction:row;align-items:center;gap:0.75rem;">
+      <img src="images/logo.png" alt="FPL Logo" style="width:40px;height:40px;object-fit:contain;border-radius:50%;">
+      <div>
+        <span class="nav-logo-abbr">FPL</span>
+        <span class="nav-logo-name">Football Principle Lab</span>
+      </div>
     </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -695,20 +698,17 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 </header>
 
 <!-- HERO IMAGE -->
-<div style="height:320px;overflow:hidden;position:relative;">
+<div style="height:300px;overflow:hidden;position:relative;">
   <img src="https://images.unsplash.com/photo-1508098682722-e99c643e7f0c?w=1600&auto=format&fit=crop&q=70"
        alt="Football Principle Lab" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;filter:grayscale(20%);">
-  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.45) 100%);"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.5) 100%);"></div>
 </div>
 
-<!-- HERO -->
 <section class="about-hero">
   <div class="about-content">
-    <p class="hero-eyebrow" style="margin-bottom:1.5rem;">
-      <span style="font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.15em;color:var(--green);text-transform:uppercase;display:flex;align-items:center;gap:0.75rem;">
-        <span style="display:block;width:2rem;height:1px;background:var(--green);"></span>
-        About
-      </span>
+    <p style="font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.15em;color:var(--green);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem;">
+      <span style="display:block;width:2rem;height:1px;background:var(--green);"></span>
+      About
     </p>
     <h1>Football Principle Lab<br>について</h1>
   </div>
@@ -722,47 +722,55 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
       <p class="ja">フットボールは出来事の集まりではない。<br>原則の集まりである。</p>
     </div>
 
-    <h2>私たちのコンセプト</h2>
-    <p>Football Principle Lab（FPL）は、試合結果やニュースを扱うメディアではありません。「現象ではなく原則を語る」ことをコンセプトとしたサッカー戦術・指導論メディアです。</p>
-    <p>スコアボードに映るゴール、失点、ターンオーバー——これらはすべて「現象」です。しかし私たちが問いたいのは、その現象の背後で何が起きているのかということ。どのような空間認識があったか。どのような選択基準が作用していたか。どのような原則がそのアクションを支えていたか。</p>
-    <p>FPLはその問いに答えるための言語と概念を体系化し、コーチ・選手・分析担当者が実践に応用できる知識を提供します。</p>
+    <h2>このメディアについて</h2>
+    <p>Football Principle Lab（FPL）は、「現象ではなく原則を語る」をコンセプトとしたサッカー戦術・指導論メディアです。試合結果やニュースではなく、フットボールの背後にある原則を言語化することを目的としています。</p>
+    <p>戦術の「形」だけを学ぶのではなく、「なぜそうプレーするのか」という本質的な問いに答えられる指導者・選手・分析担当者を増やしたい。そのための知識のプラットフォームを目指しています。</p>
+    <p>現在は運営者が記事を執筆していますが、今後はさまざまな指導者・分析担当者による記事も掲載予定です。多様な視点からフットボールの原則を語る場にしていきます。</p>
 
-    <h2>なぜ「原則」なのか</h2>
-    <p>フットボールの指導現場では、しばしば「どうプレーするか」が語られますが、「なぜそうプレーするのか」が共有されないことがあります。この断絶が、選手の判断力の停滞や、戦術的成長の限界を生みます。</p>
-    <p>原則とは、状況が変わっても適用できる論理です。「この場面でこうする」ではなく、「こういう場面では常にこういう理由でこう判断する」という思考の骨格——それが原則です。</p>
-    <p>FPLは、この原則の言語化を通じて、指導者と選手の思考を深め、フットボールの本質的な理解を促します。</p>
-
-    <h2>対象読者</h2>
-    <p>FPLは以下のような方々に向けて書かれています。</p>
-    <ul style="list-style:disc;padding-left:1.5rem;margin-bottom:1.5rem;color:var(--gray-800);line-height:2;">
-      <li>サッカーの戦術的理解を深めたいコーチ・指導者</li>
-      <li>自身のプレーの「なぜ」を言語化したい選手</li>
-      <li>試合分析・スカウティングに携わる分析担当者</li>
-      <li>フットボールの知的側面を探求したい研究者・愛好家</li>
-    </ul>
+    <h2>運営者について</h2>
+    <div style="border:1px solid var(--gray-200);padding:2rem;margin:1.5rem 0;">
+      <p style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.12em;color:var(--green);text-transform:uppercase;margin-bottom:1rem;">Profile</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li style="padding:0.65rem 0;border-bottom:1px solid var(--gray-100);display:grid;grid-template-columns:140px 1fr;font-size:0.9rem;">
+          <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--gray-400);letter-spacing:0.05em;text-transform:uppercase;padding-top:0.1rem;">指導歴</span>
+          <span>10年以上</span>
+        </li>
+        <li style="padding:0.65rem 0;border-bottom:1px solid var(--gray-100);display:grid;grid-template-columns:140px 1fr;font-size:0.9rem;">
+          <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--gray-400);letter-spacing:0.05em;text-transform:uppercase;padding-top:0.1rem;">経験カテゴリー</span>
+          <span>女子・男子 / 小学生〜社会人</span>
+        </li>
+        <li style="padding:0.65rem 0;border-bottom:1px solid var(--gray-100);display:grid;grid-template-columns:140px 1fr;font-size:0.9rem;">
+          <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--gray-400);letter-spacing:0.05em;text-transform:uppercase;padding-top:0.1rem;">ライセンス</span>
+          <span>JFA A級ジェネラルライセンス</span>
+        </li>
+        <li style="padding:0.65rem 0;display:grid;grid-template-columns:140px 1fr;font-size:0.9rem;">
+          <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--gray-400);letter-spacing:0.05em;text-transform:uppercase;padding-top:0.1rem;">現職</span>
+          <span>全国リーグ所属クラブ コーチ</span>
+        </li>
+      </ul>
+    </div>
 
     <h2>カテゴリー構成</h2>
-    <p>FPLは以下の5つのカテゴリーで知識を体系化しています。</p>
     <div style="border:1px solid var(--gray-200);margin:1.5rem 0;">
-      <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--gray-200);display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:start;">
-        <strong style="font-family:var(--font-mono);font-size:0.8rem;color:var(--green);">Principles</strong>
-        <span style="font-size:0.9rem;color:var(--gray-600);">攻撃原則・守備原則・トランジションの普遍的な論理</span>
+      <div style="padding:1.1rem 1.5rem;border-bottom:1px solid var(--gray-200);display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:start;">
+        <strong style="font-family:var(--font-mono);font-size:0.78rem;color:var(--green);">Principles</strong>
+        <span style="font-size:0.88rem;color:var(--gray-600);">攻撃原則・守備原則・トランジションの普遍的な論理</span>
       </div>
-      <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--gray-200);display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:start;">
-        <strong style="font-family:var(--font-mono);font-size:0.8rem;color:var(--green);">Individual Tactics</strong>
-        <span style="font-size:0.9rem;color:var(--gray-600);">マーク・カバー・ポジショニング・サポートの個人戦術</span>
+      <div style="padding:1.1rem 1.5rem;border-bottom:1px solid var(--gray-200);display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:start;">
+        <strong style="font-family:var(--font-mono);font-size:0.78rem;color:var(--green);">Individual Tactics</strong>
+        <span style="font-size:0.88rem;color:var(--gray-600);">マーク・カバー・ポジショニング・サポートの個人戦術</span>
       </div>
-      <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--gray-200);display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:start;">
-        <strong style="font-family:var(--font-mono);font-size:0.8rem;color:var(--green);">Training</strong>
-        <span style="font-size:0.9rem;color:var(--gray-600);">トレーニング設計・コーチング・セッションデザイン</span>
+      <div style="padding:1.1rem 1.5rem;border-bottom:1px solid var(--gray-200);display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:start;">
+        <strong style="font-family:var(--font-mono);font-size:0.78rem;color:var(--green);">Training</strong>
+        <span style="font-size:0.88rem;color:var(--gray-600);">トレーニング設計・コーチング・セッションデザイン</span>
       </div>
-      <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--gray-200);display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:start;">
-        <strong style="font-family:var(--font-mono);font-size:0.8rem;color:var(--green);">Analysis</strong>
-        <span style="font-size:0.9rem;color:var(--gray-600);">試合分析・得点分析・失点分析の方法論</span>
+      <div style="padding:1.1rem 1.5rem;border-bottom:1px solid var(--gray-200);display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:start;">
+        <strong style="font-family:var(--font-mono);font-size:0.78rem;color:var(--green);">Analysis</strong>
+        <span style="font-size:0.88rem;color:var(--gray-600);">試合分析・得点分析・失点分析の方法論</span>
       </div>
-      <div style="padding:1.25rem 1.5rem;display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:start;">
-        <strong style="font-family:var(--font-mono);font-size:0.8rem;color:var(--green);">Play Models</strong>
-        <span style="font-size:0.9rem;color:var(--gray-600);">監督・チームのプレーモデルの構造的分析</span>
+      <div style="padding:1.1rem 1.5rem;display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:start;">
+        <strong style="font-family:var(--font-mono);font-size:0.78rem;color:var(--green);">Play Models</strong>
+        <span style="font-size:0.88rem;color:var(--gray-600);">監督・チームのプレーモデルの構造的分析</span>
       </div>
     </div>
 
@@ -776,10 +784,13 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand">
-        <div class="nav-logo">
-          <span class="nav-logo-abbr">FPL</span>
-          <span class="nav-logo-name">Football Principle Lab</span>
+      <div>
+        <div class="nav-logo" style="flex-direction:row;align-items:center;gap:0.75rem;">
+          <img src="images/logo.png" alt="FPL Logo" style="width:44px;height:44px;object-fit:contain;border-radius:50%;opacity:0.9;">
+          <div>
+            <span class="nav-logo-abbr">FPL</span>
+            <span class="nav-logo-name">Football Principle Lab</span>
+          </div>
         </div>
         <p class="footer-tagline">Discover the Principles Behind the Game.</p>
       </div>
