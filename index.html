@@ -725,20 +725,16 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
     </div>
     <div class="hero-stats">
       <div>
-        <div class="hero-stat-num">2<span>+</span></div>
+        <div class="hero-stat-num"><span id="heroArticleCount">0</span><span>+</span></div>
         <div class="hero-stat-label">公開記事</div>
       </div>
       <div>
-        <div class="hero-stat-num" style="font-size:1rem;padding-top:0.5rem;">A級</div>
-        <div class="hero-stat-label">JFAライセンス保持</div>
+        <div class="hero-stat-num" id="heroCategoryCount">0</div>
+        <div class="hero-stat-label">カテゴリー</div>
       </div>
       <div>
-        <div class="hero-stat-num" style="font-size:1rem;padding-top:0.5rem;">J・南米</div>
-        <div class="hero-stat-label">指導経験</div>
-      </div>
-      <div>
-        <div class="hero-stat-num" style="font-size:1rem;padding-top:0.5rem;">原則</div>
-        <div class="hero-stat-label">ベースで体系化</div>
+        <div class="hero-stat-num" style="font-size:1.1rem;padding-top:0.4rem;">原則を語る</div>
+        <div class="hero-stat-label">コンセプト</div>
       </div>
     </div>
   </div>
@@ -746,15 +742,8 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 
 <!-- QUICK ACCESS -->
 <nav class="quick-access" aria-label="カテゴリーへのクイックアクセス">
-  <div class="quick-access-inner">
+  <div class="quick-access-inner" id="quickAccessNav">
     <a href="articles.html" class="quick-access-item"><span class="dot"></span>All Articles</a>
-    <a href="articles.html?cat=principles" class="quick-access-item"><span class="dot"></span>Principles</a>
-    <a href="articles.html?cat=individual" class="quick-access-item"><span class="dot"></span>Individual Tactics</a>
-    <a href="articles.html?cat=skill" class="quick-access-item"><span class="dot"></span>Individual Skill</a>
-    <a href="articles.html?cat=training" class="quick-access-item"><span class="dot"></span>Training</a>
-    <a href="articles.html?cat=analysis" class="quick-access-item"><span class="dot"></span>Analysis</a>
-    <a href="articles.html?cat=playmodels" class="quick-access-item"><span class="dot"></span>Play Models</a>
-    <a href="articles.html?cat=special" class="quick-access-item"><span class="dot"></span>Special</a>
   </div>
 </nav>
 
@@ -771,28 +760,7 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
       </a>
     </div>
-    <div class="articles-grid" style="grid-template-columns:1fr 1fr;">
-      <article class="article-card article-card--featured">
-        <img class="card-thumbnail" src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=900&auto=format&fit=crop&q=70" alt="優位性の本質を考える" loading="eager">
-        <div class="card-body">
-          <div class="card-number mono">No. 002</div>
-          <span class="card-category">Principles</span>
-          <h3 class="card-title"><a href="article-7.html">優位性の本質を考える</a></h3>
-          <p class="card-excerpt">数的優位・位置的優位・質的優位・関係的優位性・方向的優位性。それぞれの優位性がどのようにつながり、何を生み出すのか。優位性の本質を考察する。</p>
-          <div class="card-meta"><span>2025.06.13</span><span>8 min read</span></div>
-        </div>
-      </article>
-      <article class="article-card">
-        <img class="card-thumbnail" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&auto=format&fit=crop&q=70" alt="サッカーにおける原理と原則とは何か" loading="lazy">
-        <div class="card-body">
-          <div class="card-number mono">No. 001</div>
-          <span class="card-category">Principles</span>
-          <h3 class="card-title"><a href="article-6.html">サッカーにおける「原理」と「原則」とは何か</a></h3>
-          <p class="card-excerpt">戦術の前に理解すべき土台。「原理」と「原則」の違いを整理し、本質から逆算して戦術を考えるための第一歩を解説する。</p>
-          <div class="card-meta"><span>2025.06.13</span><span>5 min read</span></div>
-        </div>
-      </article>
-    </div>
+    <div class="articles-grid" style="grid-template-columns:1fr 1fr;" id="latestArticlesGrid"></div>
   </div>
 </section>
 
@@ -819,50 +787,7 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
         <h2 class="section-title">カテゴリー</h2>
       </div>
     </div>
-    <div class="categories-grid" style="grid-template-columns:repeat(4,1fr);border:1px solid var(--gray-200);">
-      <a href="articles.html?cat=principles" class="category-item">
-        <div class="category-num mono">01</div>
-        <div class="category-name">Principles</div>
-        <div class="category-count mono">2 articles</div>
-        <p class="category-desc">サッカーの本質</p>
-      </a>
-      <a href="articles.html?cat=individual" class="category-item">
-        <div class="category-num mono">02</div>
-        <div class="category-name">Individual Tactics</div>
-        <div class="category-count mono">0 articles</div>
-        <p class="category-desc">個人戦術（サポート・マークなど）</p>
-      </a>
-      <a href="articles.html?cat=skill" class="category-item">
-        <div class="category-num mono">03</div>
-        <div class="category-name">Individual Skill</div>
-        <div class="category-count mono">0 articles</div>
-        <p class="category-desc">個人スキルの習得と向上</p>
-      </a>
-      <a href="articles.html?cat=training" class="category-item">
-        <div class="category-num mono">04</div>
-        <div class="category-name">Training</div>
-        <div class="category-count mono">0 articles</div>
-        <p class="category-desc">コーチング・セッションデザイン</p>
-      </a>
-      <a href="articles.html?cat=analysis" class="category-item">
-        <div class="category-num mono">05</div>
-        <div class="category-name">Analysis</div>
-        <div class="category-count mono">0 articles</div>
-        <p class="category-desc">試合分析・得点・失点分析</p>
-      </a>
-      <a href="articles.html?cat=playmodels" class="category-item">
-        <div class="category-num mono">06</div>
-        <div class="category-name">Play Models</div>
-        <div class="category-count mono">0 articles</div>
-        <p class="category-desc">監督・チームのプレーモデル解析</p>
-      </a>
-      <a href="articles.html?cat=special" class="category-item">
-        <div class="category-num mono">07</div>
-        <div class="category-name">Special</div>
-        <div class="category-count mono">0 articles</div>
-        <p class="category-desc">他の指導者・分析担当者による寄稿</p>
-      </a>
-    </div>
+        <div class="categories-grid" style="grid-template-columns:repeat(4,1fr);" id="categoryGrid"></div>
   </div>
 </section>
 
@@ -908,6 +833,8 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
   </div>
 </footer>
 
+<script src="data.js"></script>
+<script src="render.js"></script>
 <script>
   document.getElementById('hamburger').addEventListener('click', function() {
     var nav = document.getElementById('mobileNav');
